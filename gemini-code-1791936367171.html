@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komputer & Jaringan Dasar - Portal Pertanyaan Essay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col relative selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navbar Minimalis -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="h-10 w-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center shadow-sm">
+                    <!-- Icon Document / Essay -->
+                    <svg class="w-5 h-5 text-indigo-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight text-slate-900 block leading-none">KJD PORTAL ESSAY</span>
+                    <span class="text-xs text-slate-500 font-medium tracking-wide">Komputer & Jaringan Dasar</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-2 text-xs font-semibold px-3 py-1.5 bg-slate-100 border border-slate-200 text-slate-600 rounded-full">
+                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                <span>SYSTEM ONLINE</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="bg-white border-b border-slate-200 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-semibold rounded-full mb-4">
+                <span>📝 LEMBAR KERJA PERTANYAAN ESSAY</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+                Portal Evaluasi & Soal Essay KJD
+            </h1>
+            <p class="text-slate-600 text-base max-w-2xl leading-relaxed">
+                Pilih modul di bawah ini untuk mengakses lembar kerja pertanyaan essay interaktif terkait keselamatan kerja (K3LH), perangkat keras, perakitan, BIOS, hingga troubleshooting PC.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <h2 class="text-xl font-bold text-slate-900 tracking-tight">Daftar Modul & Pertanyaan Essay</h2>
+                <p class="text-sm text-slate-500 mt-0.5">Klik pada modul untuk membuka lembar pertanyaan essay secara langsung.</p>
+            </div>
+            <div class="text-xs font-semibold px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-lg shadow-sm">
+                11 Modul Essay
+            </div>
+        </div>
+
+        <div id="cardGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Kartu modul akan digenerate secara otomatis via JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs font-medium text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 Komputer & Jaringan Dasar. Portal Pertanyaan Essay Interaktif.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data Modul dan Tautan File HTML Pertanyaan Essay
+        const modulesData = [
+            {
+                modul: "MODUL-01",
+                file: "LKPD 01 Dasar-Dasar K3LH & Regulasi Teknisi IT 00.html",
+                pertemuan: "Pertemuan 1",
+                title: "Dasar-Dasar K3LH & Regulasi Teknisi IT"
+            },
+            {
+                modul: "MODUL-02",
+                file: "LKPD 02 Alat Pelindung Diri (APD) Spesifik TJKT03.html",
+                pertemuan: "Pertemuan 2",
+                title: "Alat Pelindung Diri (APD) Spesifik TJKT"
+            },
+            {
+                modul: "MODUL-03",
+                file: "LKPD 03 Keselamatan Kerja Komputer & Jaringan.html",
+                pertemuan: "Pertemuan 3",
+                title: "Keselamatan Kerja Komputer & Jaringan"
+            },
+            {
+                modul: "MODUL-04",
+                file: "LKPD 04 Ergonomi & Kesehatan Kerja (Office & Lab Ergonomics).html",
+                pertemuan: "Pertemuan 4",
+                title: "Ergonomi & Kesehatan Kerja (Office & Lab Ergonomics)"
+            },
+            {
+                modul: "MODUL-05",
+                file: "LKPD 05 Tanggap Darurat & Pengelolaan Lingkungan Hidup.html",
+                pertemuan: "Pertemuan 5",
+                title: "Tanggap Darurat & Pengelolaan Lingkungan Hidup"
+            },
+            {
+                modul: "MODUL-06",
+                file: "LKPD 06 Pengenalan Komponen Hardware.html",
+                pertemuan: "Pertemuan 6",
+                title: "Pengenalan Komponen Hardware Komputer"
+            },
+            {
+                modul: "MODUL-07",
+                file: "LKPD 07 Kesehatan & Keselamatan Kerja (K3).html",
+                pertemuan: "Pertemuan 7",
+                title: "Kesehatan & Keselamatan Kerja (K3) Praktikum"
+            },
+            {
+                modul: "MODUL-08",
+                file: "LKPD 08 Persiapan Perakitan Komputer.html",
+                pertemuan: "Pertemuan 8",
+                title: "Persiapan & Alat Perakitan Komputer"
+            },
+            {
+                modul: "MODUL-09",
+                file: "LKPD 09 Praktik Langkah Perakitan PC.html",
+                pertemuan: "Pertemuan 9",
+                title: "Praktik Langkah-Langkah Perakitan PC"
+            },
+            {
+                modul: "MODUL-10",
+                file: "LKPD 10 Pengujian & Setting BIOSUEFI.html",
+                pertemuan: "Pertemuan 10",
+                title: "Pengujian POST & Configuration BIOS/UEFI"
+            },
+            {
+                modul: "MODUL-11",
+                file: "LKPD 11 Troubleshooting Dasar Perakitan Komputer.html",
+                pertemuan: "Pertemuan 11",
+                title: "Troubleshooting Dasar Perakitan Komputer"
+            }
+        ];
+
+        const grid = document.getElementById('cardGrid');
+
+        modulesData.forEach((item) => {
+            const card = document.createElement('div');
+            card.className = "bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all duration-200 flex flex-col justify-between overflow-hidden group";
+            
+            card.innerHTML = `
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-md tracking-wider border border-indigo-100">${item.modul}</span>
+                        <span class="text-xs font-medium text-slate-400">${item.pertemuan}</span>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors leading-snug mb-4">
+                        ${item.title}
+                    </h3>
+                    
+                    <!-- Direct Link URL -->
+                    <div class="bg-slate-50 border border-slate-100 rounded-lg p-2.5 flex items-center gap-2">
+                        <svg class="w-4 h-4 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                        </svg>
+                        <a href="${encodeURI(item.file)}" class="text-xs font-mono text-indigo-600 hover:underline truncate">
+                            ${item.file}
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="${encodeURI(item.file)}" class="w-full py-3 px-6 bg-slate-50 hover:bg-indigo-600 hover:text-white text-slate-700 text-xs font-semibold uppercase tracking-wider transition-all duration-200 flex items-center justify-between border-t border-slate-100 group/btn">
+                    <span>Buka Soal Essay</span>
+                    <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            `;
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
